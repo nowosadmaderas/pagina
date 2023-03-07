@@ -75,23 +75,23 @@ body{
         flex-direction: column;
         align-items: center;
         margin-right: 20px;
-        background-color: beige;
+        background-color: #AAD501;
         position: fixed;
         left: 0;
         top: 60px;
         width: 100%;
         padding: 20px 0;
-        height: calc(100% - 60px);
+        height: 70%;
         overflow-y: auto;
         left: 100%;
-        transition: left 0,3s;
+        transition: left .3s;
     }
     .nav-menu-item{
         line-height: 70px;
     }
     .nav-menu-link:hover{
         background: none;
-        color: blue;
+        color: rgb(0, 0, 0);
     }
     .nav-toggle{
         display: block;
@@ -100,7 +100,158 @@ body{
         left: 0%;
     }
 }
+/*inicio*/
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/inicio_fondo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.inicio .image img{
+    width: 40vw;
+}
+.inicio .content h3{
+    font-size: 5.5rem;
+    color: #AAD501;
+    text-transform: uppercase;
+}
+.inicio .content p{
+    font-size: 1.7rem;
+    color: #000000;
+    padding: 1rem 0;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .6rem 1rem;
+    border-radius: 5rem;
+    background: #AAD501;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 16px 27px 15px -3px rgba(0,0,0,0.1);
+    transition: all .3s linear;
+    text-decoration: none;
+    border: none;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background-color: #749100;
 
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.card{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    overflow: hidden;
+    width: 300px;
+    height: 380px;
+    background-color: white;
+    box-shadow: 0px 0px 15px 9px rgba(0,0,0,0.1);
+    transition: .3s ease-in-out;
+}
+.card:hover{
+    width: 600px;
+}
+.card .imgbox{
+    position: relative;
+    min-width: 300px;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.card .imgbox img{
+    width: 85%;
+    height: auto;
+}
+.card .details{
+    position: relative;
+    min-width: 300px;
+    background: #AAD501;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: #ffffff;
+}
+.card .details::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #ffffff;
+}
+.card .details h4{
+    font-size: 1rem;
+}
+.card .details .description p{
+    font-size: .8em;
+    font-weight: 200;
+}
+.card .details .buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .details .buy .price{
+    font-size: 1.6em;
+}
+.card .details .buy .boton{
+    background: #ffffff;
+    padding: .8em;
+    text-transform: uppercase;
+    border-radius: 6px;
+}
+.card .details .buy .boton a{
+    text-decoration: none;
+    color: #AAD501;
+}
+.card .details .buy .boton:hover{
+    background: #749100;
+    cursor: pointer;
+}
+.card .details .buy .boton a:hover{
+    color: #ffffff;
+}
+
+
+/*inicio responsive*/
+@media (max-width:768px) {
+    .inicio{
+        flex-flow: column-reverse;
+    }
+    .inicio .image img{
+        width: 100%;
+    }
+    .inicio .content h3{
+        font-size: 3.6rem;
+    }
+    .inicio .content p{
+        font-size: 1.5rem;
+    }
+}
 /*footer*/
 .container{
 	max-width: 1170px;
